@@ -1,6 +1,0 @@
-C:\work\csharp\Shuffle\Shuffle\bin\Debug\Shuffle.exe.config
-C:\work\csharp\Shuffle\Shuffle\bin\Debug\Shuffle.exe
-C:\work\csharp\Shuffle\Shuffle\bin\Debug\Shuffle.pdb
-C:\work\csharp\Shuffle\Shuffle\obj\Debug\Shuffle.csprojResolveAssemblyReference.cache
-C:\work\csharp\Shuffle\Shuffle\obj\Debug\Shuffle.exe
-C:\work\csharp\Shuffle\Shuffle\obj\Debug\Shuffle.pdb
