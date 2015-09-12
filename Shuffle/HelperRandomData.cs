@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Shuffle
 {
@@ -29,7 +30,6 @@ namespace Shuffle
         /// <summary>
         /// select randomly a subset of size k from online data
         /// </summary>
-        /// <param name="k">size of subset</param>
         public static IEnumerable<T> GetRandomSubset<T>(IEnumerable<T> data, int k)
         {
             // note: you can pass random as an argument
@@ -53,6 +53,25 @@ namespace Shuffle
                     // store element in the result at random position
                     result[pos] = el;
                 }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Shuffle a collection
+        /// data size has to be known otherwise a converstion to IList is necessary
+        /// </summary>
+        public static IEnumerable<T> Shuffle<T>(IEnumerable<T> data)
+        {
+            // note: you can pass random as an argument
+            var random = new Random();
+            var result = data.ToList();
+            for (int i = 0; i < result.Count; i++)
+            {
+                var pos = random.Next(i, result.Count);
+                var temp = result[pos];
+                result[pos] = result[i];
+                result[i] = temp;
             }
             return result;
         }
